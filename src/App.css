@@ -1,11 +1,75 @@
 .App {
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
   text-align: center;
+  margin: 15px;
+
+  grid-template-areas:
+  "h h"
+  "nav content"
+  "f f";
+}
+.wrapper-header{
+grid-area: h;
+background: green;
+margin-bottom: 15px;
+}
+.wrapper-content{
+  grid-area: content;
+  display: grid;
+
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+  grid-template-areas:
+  "img "
+  "avatar"
+  "post";
+}
+.wrapper-nav{
+  grid-area: nav;
+  height: 100%; 
+  margin-right: 15px;
+}
+.wrapper-footer{
+  grid-area: f;
+  background: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-banner{
+  grid-area: img;
+  max-height: 200px;
 }
+.avatar-content{
+  grid-area: avatar;
+  background: lightslategray;
+  height: 200px;
+  display: flex;
+  flex-direction: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 15px 0 15px 0;
+}
+.post{
+  grid-area: post;
+  height: 100px;
+  margin: 0 0 15px 0;
+}
+.banner-img{
+  width: 100%;
+  height: 100%;
+}
+.img-avatar{
+  width: 80px;
+  height: 100px;
+}
+input, button{
+  max-width: 400px;
+  height: 50px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
