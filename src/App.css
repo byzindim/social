@@ -1,4 +1,4 @@
-.App {
+.wrapper-home {
   display: grid;
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
@@ -9,6 +9,32 @@
   "h h"
   "nav content"
   "f f";
+}
+.wrapper-dialog{
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 3fr 7fr;
+  text-align: center;
+  margin: 15px;
+
+  grid-template-areas:
+  "h h h"
+  "nav pl mes"
+  "f f f";
+}
+.wrapper-person-list{
+  grid-area: pl;
+  background: blue;
+  margin-bottom: 15px;
+  }
+  .wrapper-person-message{
+    grid-area: mes;
+    background: darkred;
+    margin-bottom: 15px;
+    }
+.dialog-content{
+  display: flex;
+  flex-wrap: nowrap;
 }
 .wrapper-header{
 grid-area: h;
@@ -27,6 +53,7 @@ margin-bottom: 15px;
   "img "
   "avatar"
   "post";
+  max-width: 1200px;
 }
 .wrapper-nav{
   grid-area: nav;
@@ -57,9 +84,13 @@ margin-bottom: 15px;
   height: 100px;
   margin: 0 0 15px 0;
 }
+.img-banner{
+  display: flex;
+  flex-direction: row;
+}
 .banner-img{
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  /* height: 100%; */
 }
 .img-avatar{
   width: 80px;
@@ -69,7 +100,10 @@ input, button{
   max-width: 400px;
   height: 50px;
 }
-
+.post{
+  display: flex;
+  flex-direction: row;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
