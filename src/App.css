@@ -24,17 +24,25 @@
 }
 .wrapper-person-list{
   grid-area: pl;
-  background: blue;
+  background: orange;
   margin-bottom: 15px;
+  height: 400px;
+  max-width: 500px;
+  width: 100%;
   }
   .wrapper-person-message{
     grid-area: mes;
     background: darkred;
     margin-bottom: 15px;
+    max-width: 200px;
+  width: 100%;
     }
 .dialog-content{
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
 }
 .wrapper-header{
 grid-area: h;
