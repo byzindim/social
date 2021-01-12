@@ -11,21 +11,23 @@ import './App.css';
 import Dialog from './pages/Dialog';
 
 
-class App extends Component {
-  render() {
-    const { history } = this.props;
-    return (
+function App(props) {
 
-      <div className="App">
-        <BrowserRouter >
-          <Route history={history} exact path='/' component={Home} />
-          <Route history={history} path='/dialog' component={Dialog} />
-          <Redirect from='/' to='/' />
-        </BrowserRouter>
-      </div>
 
-    )
-  }
+
+
+  return (
+
+    <div className="App">
+      <BrowserRouter >
+        <Route exact path='/' render={() => <Home postsPerson={props.postsPerson} />} />
+        <Route path='/dialog' render={() => <Dialog dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+        <Redirect from='/' to='/' />
+      </BrowserRouter>
+    </div>
+
+  )
+
 }
 
 export default withRouter(App);

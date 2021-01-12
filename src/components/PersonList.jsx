@@ -11,14 +11,8 @@ const DialogItem = (props) => {
     )
 }
 export default function PersonList(props) {
-    let dialogsData = [
-        { id: 1, name: 'Dim' },
-        { id: 2, name: 'Alex' },
-        { id: 3, name: 'Misha' },
-        { id: 4, name: 'Vlad' },
-        { id: 5, name: 'Sem' },
-    ]
-    let dialogElements = dialogsData.map(dialog => {
+
+    let dialogElements = props.dialogsData.map(dialog => {
         return <DialogItem name={dialog.name} id={dialog.id} />
     })
 
